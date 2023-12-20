@@ -1,0 +1,137 @@
+body {
+    background-color: #EFEEF2;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    margin: 0;
+}
+
+#budget-summary {
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+#budget-summary .header {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+ 
+ }
+/* pie chart */
+.pie {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: conic-gradient(
+        rgba(172,84,210,1) 0% 64%,
+        rgba(172,84,210,0.64) 64% 88%,
+        rgba(172,84,210,0.24) 88% 90%,
+            #EFEEF2 90% 100%)
+}  
+
+.pie.hollow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie.hollow::after {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+
+#planned-expenses .title {
+    font-size: 9px;
+    color: #5A5A5A;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+#planned-expenses .expense-amount {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Nunito';
+}
+
+.budget-outcome {
+    font-size: 14px;
+    color: #1E1E1D;
+    font-weight: 300;
+}
+
+.budget-outcome strong {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+#section-summary-list {
+    margin: 0;
+    padding: 0;
+}
+
+#section-summary-list .section-summary-item {
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.section-summary-item .name {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.section-summary-item .amount {
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.section-summary-item .percentage {
+    color: #8B8B8C;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.section-icon {
+    background-color: #A050E0;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+
+.opacity-1 {
+    opacity: 1;
+}
+
+.opacity-64 {
+    opacity: 0.64;
+}
+
+
+.opacity-24 {
+    opacity: 0.24;
+}
+
+.opacity-8 {
+    opacity: 0.8;
+}
+
+.opacity-6 {
+    opacity: 0.6;
+}
+
+.opacity-4 {
+    opacity: 0.4;
+}
