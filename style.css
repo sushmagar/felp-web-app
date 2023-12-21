@@ -23,11 +23,6 @@ body {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background: conic-gradient(
-        rgba(172,84,210,1) 0% 64%,
-        rgba(172,84,210,0.64) 64% 88%,
-        rgba(172,84,210,0.24) 88% 90%,
-            #EFEEF2 90% 100%)
 }  
 
 .pie.hollow {

@@ -15,41 +15,43 @@
 <body>
     <div id="budget-summary">
         <div class="header">
-            <div class="pie hollow"></div>
+            <div id="summary-expenses-pie-chart" class="pie hollow"></div>
             <div class="">
             <div id="planned-expenses">
                 <h1 class="title">Total Planned Expenses</h1>
-                <span class="expense-amount">$7,735</span>
+                <span id="total-planned-expenses" class="expense-amount">$7,735</span>
             </div>
-            <span class="budget-outcome"><strong>$709</strong> left to budget</span>
+            <span id="budget-outcome" class="budget-outcome"><strong>$709</strong> left to budget</span>
         </div>
         </div>
         <ul id="section-summary-list">
             <li class="section-summary-item">
                 <div class="section-icon opacity-1">
                 </div>
-                <span class="name">Needs</span>
-                <span class="percentage">64%</span>
-                <span class="amount">$5,466</span>
+                <span id="needs-name" class="name">Needs</span>
+                <span id="needs-percentage" class="percentage">64%</span>
+                <span id="needs-amount" class="amount">$5,466</span>
             </li>
             <li class="section-summary-item">
                 <div class="section-icon opacity-64">
                 </div>
-                <span class="name">Savings & Debt</span>
-                <span class="percentage">24%</span>
-                <span class="amount">$2,059</span>
+                <span id="saving-and-debt-name" class="name">Savings & Debt</span>
+                <span id="saving-and-debt-percentage" class="percentage">24%</span>
+                <span id="saving-and-debt-amount" class="amount">$2,059</span>
             </li>
             <li class="section-summary-item">
                 <div class="section-icon opacity-24">
                 </div>
-                <span class="name">Wants</span>
-                <span class="percentage">2%</span>
-                <span class="amount">$210</span>
+                <span id="wants-name" class="name">Wants</span>
+                <span id="wants-percentage" class="percentage">2%</span>
+                <span id="wants-amount" class="amount">$210</span>
             </li>
            
         </ul>
 
     </div>
+   
+    <script src="index.js"></script>
 </body>
 
 </html>

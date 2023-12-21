@@ -1,0 +1,27 @@
+{
+    "currencySymbol": "$",
+    "summary": {
+        "totalPlannedExpenses": 9735,
+        "budgetOutcome": {
+            "amount":600,
+            "note":"left to budget"
+        },
+        "plannedExpenses": {
+            "needs": {
+                "name": "Needs",
+                "percentage": 50,
+                "amount": 6666
+            },
+            "savingAndDebt": {
+                "name": "Savings & Debt ",
+                "percentage": 20,
+                "amount": 5734
+            },
+            "wants": {
+                "name": "Wants",
+                "percentage":20,
+                "amount": 200
+            }
+        }
+    }
+}
