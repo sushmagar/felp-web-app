@@ -5,25 +5,42 @@ body {
     margin: 0;
 }
 
-#budget-summary {
-    padding: 30px 20px;
+.card {
+    padding: 10px 20px;
     border-radius: 10px;
     background-color: #FFFFFF;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+
+.card .heading {
+    font-family: 'Nunito';
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+/* budget summary */
+
+#budget-summary {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #budget-summary .header {
     display: flex;
     column-gap: 20px;
     align-items: center;
- 
- }
+
+}
+
 /* pie chart */
 .pie {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-}  
+}
 
 .pie.hollow {
     display: flex;
@@ -40,7 +57,7 @@ body {
     background-color: #FFFFFF;
 }
 
-
+/* planned expenses */
 #planned-expenses .title {
     font-size: 9px;
     color: #5A5A5A;
@@ -56,6 +73,7 @@ body {
     font-family: 'Nunito';
 }
 
+/* budget outcomes */
 .budget-outcome {
     font-size: 14px;
     color: #1E1E1D;
@@ -66,7 +84,7 @@ body {
     font-weight: 500;
     font-size: 14px;
 }
-
+/* section summary */
 
 #section-summary-list {
     margin: 0;
@@ -129,4 +147,52 @@ body {
 
 .opacity-4 {
     opacity: 0.4;
+}
+
+
+/* section category list */
+.section-category-list {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+}
+
+.section-category-list-item {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #F7F7F7;
+    padding: 10px 0;
+    column-gap: 10px;
+
+}
+
+.section-category-amount {
+    margin-left: auto;
+    padding: 6px 12px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+}
+
+.category-icon {
+    background: #cab2dd;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px !important;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.category-add-icon {
+    background: #F5F4F8;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px !important;
+    vertical-align: middle;
+    padding: 0;
+
 }
