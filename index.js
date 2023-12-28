@@ -155,6 +155,9 @@ function loadBudgetOutcome(budget) {
     budgetOutcomeElement.innerHTML = `<strong>${formatAmount(budget.summary.budgetOutcome.amount)}</strong> ${budget.summary.budgetOutcome.note}`;
 }
 function loadNeedsSummary(budget) {
+    const needsIconElement = document.getElementById('needs-icon');
+    needsIconElement.style.opacity = 1;
+
     const needsNameElement = document.getElementById('needs-name');
     needsNameElement.innerText = budget.summary.plannedExpenses.needs.name;
 
@@ -165,6 +168,9 @@ function loadNeedsSummary(budget) {
     needsAmountElement.innerText = formatAmount(budget.summary.plannedExpenses.needs.amount);
 }
 function loadSavingAndDebtSummary(budget) {
+    const savingAndDebtIconElement = document.getElementById('saving-and-debt-icon');
+    savingAndDebtIconElement.style.opacity = budget.summary.plannedExpenses.wants.percentage / 100;
+
     const savingAndDebtNameElement = document.getElementById('saving-and-debt-name');
     savingAndDebtNameElement.innerText = budget.summary.plannedExpenses.savingAndDebt.name;
 
@@ -176,6 +182,9 @@ function loadSavingAndDebtSummary(budget) {
 }
 
 function loadWantsSummary(budget) {
+    const wantsIconElement = document.getElementById('wants-icon');
+    wantsIconElement.style.opacity = budget.summary.plannedExpenses.needs.percentage / 100;
+
     const wantsNameElement = document.getElementById('wants-name');
     wantsNameElement.innerText = budget.summary.plannedExpenses.wants.name;
 

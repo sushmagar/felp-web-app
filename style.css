@@ -124,32 +124,6 @@ body {
 }
 
 
-.opacity-1 {
-    opacity: 1;
-}
-
-.opacity-64 {
-    opacity: 0.64;
-}
-
-
-.opacity-24 {
-    opacity: 0.24;
-}
-
-.opacity-8 {
-    opacity: 0.8;
-}
-
-.opacity-6 {
-    opacity: 0.6;
-}
-
-.opacity-4 {
-    opacity: 0.4;
-}
-
-
 /* section category list */
 .section-category-list {
     margin: 0;
