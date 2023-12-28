@@ -1,142 +1,156 @@
 {
-    "currencySymbol": "$",
     "summary": {
-        "totalPlannedExpenses": 9735,
+        "totalPlannedExpenses": {
+            "currencySymbol": "$",
+            "value": 9735
+        },
         "budgetOutcome": {
-            "amount":600,
-            "note":"left to budget"
+            "amount": {
+                "currencySymbol": "$",
+                "value": 600
+            },
+            "note": "left to budget"
         },
         "plannedExpenses": {
             "needs": {
                 "name": "Needs",
                 "percentage": 50,
-                "amount": 6666
+                "amount": {
+                    "currencySymbol": "$",
+                    "value": 6666
+                }
             },
             "savingAndDebt": {
                 "name": "Savings & Debt ",
                 "percentage": 20,
-                "amount": 5734
+                "amount": {
+                    "currencySymbol": "$",
+                    "value": 5734
+                }
             },
             "wants": {
                 "name": "Wants",
-                "percentage":20,
-                "amount": 200
+                "percentage": 20,
+                "amount": {
+                    "currencySymbol": "$",
+                    "value": 200
+                }
             }
         }
     },
-    "incomeSection":{
-        "name":"Income",
-        "categories":[
+    "incomeSection": {
+        "name": "Income",
+        "categories": [
             {
-                "icon":"fa-hand-holding-dollar",
-                "name":"Salary",
-                "amount":{
+                "icon": "fa-hand-holding-dollar",
+                "name": "Salary",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 8444
                 }
             },
             {
-                "icon":"fa-paw",
-                "name":"Rover",
-                "amount":{
+                "icon": "fa-paw",
+                "name": "Rover",
+                "amount": {
                     "currencySymbol": "$",
-                    "value":50
-                } 
+                    "value": 50
+                }
             },
             {
-                "icon":"fa-money-bill-1-wave",
-                "name":"Cashback",
-                "amount":{
+                "icon": "fa-money-bill-1-wave",
+                "name": "Cashback",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 20
                 }
             }
         ]
     },
-    "needsSection":{
-        "name":"Needs",
-        "categories":[
+    "needsSection": {
+        "name": "Needs",
+        "categories": [
             {
-                "icon":"fa-house",
-                "name":"Mortgage",
-                "amount":{
+                "icon": "fa-house",
+                "name": "Mortgage",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 1828.93
                 }
             },
             {
-                "icon":"fa-house-flag",
-                "name":"HOA Fee",
-                "amount":{
+                "icon": "fa-house-flag",
+                "name": "HOA Fee",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 170
-                } 
+                }
             },
             {
-                "icon":"fa-cart-shopping",
-                "name":"Groceries",
-                "amount":{
+                "icon": "fa-cart-shopping",
+                "name": "Groceries",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 1200
                 }
             }
         ]
     },
-    "wantsSection":{
-        "name":"Wants",
-        "categories":[
+    "wantsSection": {
+        "name": "Wants",
+        "categories": [
             {
-                "icon":"fa-car-side",
-                "name":"Toys",
-                "amount":{
+                "icon": "fa-car-side",
+                "name": "Toys",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 20
                 }
             },
             {
-                "icon":"fa-utensils",
-                "name":"Restaurant",
-                "amount":{
+                "icon": "fa-utensils",
+                "name": "Restaurant",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 150
-                } 
+                }
             },
             {
-                "icon":"fa-shirt",
-                "name":"Clothes",
-                "amount":{
+                "icon": "fa-shirt",
+                "name": "Clothes",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 60
                 }
             }
         ]
     },
-    "savingAndDebtSection":{
-        "name":"Saving & Debt",
-        "categories":[
+    "savingAndDebtSection": {
+        "name": "Saving & Debt",
+        "categories": [
             {
-                "icon":"fa-piggy-bank",
-                "name":"Retirement 401(k)",
-                "amount":{
+                "icon": "fa-piggy-bank",
+                "name": "Retirement 401(k)",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 400.03
                 }
             },
             {
-                "icon":"fa-house-fire",
-                "name":"Emergency Saving",
-                "amount":{
+                "icon": "fa-house-fire",
+                "name": "Emergency Saving",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 200
-                } 
+                }
             },
             {
-                "icon":"fa-circle-h",
-                "name":"HSA",
-                "amount":{
+                "icon": "fa-circle-h",
+                "name": "HSA",
+                "amount": {
                     "currencySymbol": "$",
                     "value": 280.77
-                } 
+                }
             }
         ]
     }

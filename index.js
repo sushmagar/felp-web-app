@@ -147,12 +147,12 @@ function buildBackgroundContentForPieChart(budget) {
 
 function loadTotalPlannedExpenses(budget) {
     const totalPlannedExpensesElement = document.getElementById('total-planned-expenses');
-    totalPlannedExpensesElement.innerText = `${budget.currencySymbol}${convertToCurrency(budget.summary.totalPlannedExpenses)}`;
+    totalPlannedExpensesElement.innerText = formatAmount(budget.summary.totalPlannedExpenses);
 }
 
 function loadBudgetOutcome(budget) {
     const budgetOutcomeElement = document.getElementById('budget-outcome');
-    budgetOutcomeElement.innerHTML = `<strong>${budget.currencySymbol}${budget.summary.budgetOutcome.amount}</strong> ${budget.summary.budgetOutcome.note}`;
+    budgetOutcomeElement.innerHTML = `<strong>${formatAmount(budget.summary.budgetOutcome.amount)}</strong> ${budget.summary.budgetOutcome.note}`;
 }
 function loadNeedsSummary(budget) {
     const needsNameElement = document.getElementById('needs-name');
@@ -162,7 +162,7 @@ function loadNeedsSummary(budget) {
     needsPercentageElement.innerText = `${budget.summary.plannedExpenses.needs.percentage}%`;
 
     const needsAmountElement = document.getElementById('needs-amount');
-    needsAmountElement.innerText = `${budget.currencySymbol}${convertToCurrency(budget.summary.plannedExpenses.needs.amount)}`;
+    needsAmountElement.innerText = formatAmount(budget.summary.plannedExpenses.needs.amount);
 }
 function loadSavingAndDebtSummary(budget) {
     const savingAndDebtNameElement = document.getElementById('saving-and-debt-name');
@@ -172,7 +172,7 @@ function loadSavingAndDebtSummary(budget) {
     savingAndDebtPercentageElement.innerText = `${budget.summary.plannedExpenses.savingAndDebt.percentage}%`
 
     const savingAndDebtAmountElement = document.getElementById('saving-and-debt-amount');
-    savingAndDebtAmountElement.innerText = `${budget.currencySymbol}${convertToCurrency(budget.summary.plannedExpenses.savingAndDebt.amount)}`;
+    savingAndDebtAmountElement.innerText = formatAmount(budget.summary.plannedExpenses.savingAndDebt.amount);
 }
 
 function loadWantsSummary(budget) {
@@ -183,7 +183,7 @@ function loadWantsSummary(budget) {
     wantsPercentageElement.innerText = `${budget.summary.plannedExpenses.wants.percentage}%`;
 
     const wantsAmountElement = document.getElementById('wants-amount');
-    wantsAmountElement.innerText = `${budget.currencySymbol}${convertToCurrency(budget.summary.plannedExpenses.wants.amount)}`;
+    wantsAmountElement.innerText = formatAmount(budget.summary.plannedExpenses.wants.amount);
 }
 function formatAmount(amount) {
     return `${amount.currencySymbol}${convertToCurrency(amount.value)}`;
