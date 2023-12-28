@@ -5,6 +5,7 @@ window.onload = function () {
         })
         .then(function (budget) {
             loadBudgetSummary(budget);
+            loadBudgetSections(budget);
         });
 }
 
@@ -12,6 +13,70 @@ window.onload = function () {
 function loadBudgetSummary(budget) {
     loadBudgetSummaryHead(budget);
     loadSectionSummaryList(budget);
+}
+
+function loadBudgetSections(budget) {
+    const budgetSectionsElement = document.getElementById('budget-sections');
+    // add Income Section
+    const incomeSectionElement = buildBudgetSectionElement(budget.incomeSection);
+    budgetSectionsElement.appendChild(incomeSectionElement);
+
+    //add Needs Section
+    const needsSectionElement = buildBudgetSectionElement(budget.needsSection);
+    budgetSectionsElement.appendChild(needsSectionElement);
+
+    // add wants section
+    const wantsSectionElement = buildBudgetSectionElement(budget.wantsSection);
+    budgetSectionsElement.appendChild(wantsSectionElement);
+
+    //add savingAndDebt Section 
+    const savingAndDebtSectionElement = buildBudgetSectionElement(budget.savingAndDebtSection);
+    budgetSectionsElement.appendChild(savingAndDebtSectionElement);
+
+
+}
+
+function buildBudgetSectionElement(budgetSection) {
+    const sectionCategoryListElement = buildSectionCategoryListElement(budgetSection);
+    return createElementFrom(`<section class="card">
+                                <h1 class="heading">${budgetSection.name}</h1>
+                                ${sectionCategoryListElement.innerHTML}
+                            </section>`);
+}
+
+function buildSectionCategoryListElement(budgetSection) {
+    const sectionCategoryListElement = createElementFrom(`<ul class="section-category-list"></ul>`);
+
+    for (const budgetCategory of budgetSection.categories) {
+        const sectionCategoryListItemElement = buildSectionCategoryListItemElement(budgetCategory);
+        sectionCategoryListElement.appendChild(sectionCategoryListItemElement);
+    }
+    //
+    const sectionCategoryListItemForAdditionElement = buildSectionCategoryListItemForAdditionElement();
+    sectionCategoryListElement.appendChild(sectionCategoryListItemForAdditionElement);
+    return sectionCategoryListElement;
+}
+function buildSectionCategoryListItemForAdditionElement() {
+    return createElementFrom(`<li class="section-category-list-item">
+                                <i class="fa-solid fa-plus category-add-icon"></i>
+                                <span>Add category</span> 
+                            </li>`);
+}
+
+function buildSectionCategoryListItemElement(budgetCategory) {
+    const sectionCategoryListItemElement = createElementFrom(`<li class="section-category-list-item">
+                                                                     <i class="fa-solid ${budgetCategory.icon} category-icon"></i>
+                                                                     <span class="section-category-name">${budgetCategory.name}</span>
+                                                                     <span class="section-category-amount">${formatAmount(budgetCategory.amount)}</span>
+                                                                  </li>`);
+    return sectionCategoryListItemElement;
+}
+
+function createElementFrom(htmlString) {
+    const template = document.createElement('template');
+    template.innerHTML = htmlString;
+    const result = template.content.children;
+    return result[0];
 }
 
 function loadBudgetSummaryHead(budget) {
@@ -120,7 +185,9 @@ function loadWantsSummary(budget) {
     const wantsAmountElement = document.getElementById('wants-amount');
     wantsAmountElement.innerText = `${budget.currencySymbol}${convertToCurrency(budget.summary.plannedExpenses.wants.amount)}`;
 }
-
+function formatAmount(amount) {
+    return `${amount.currencySymbol}${convertToCurrency(amount.value)}`;
+}
 function convertToCurrency(number) {
     return new Intl.NumberFormat('en-US').format(number);
 }

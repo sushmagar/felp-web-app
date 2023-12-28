@@ -23,5 +23,121 @@
                 "amount": 200
             }
         }
+    },
+    "incomeSection":{
+        "name":"Income",
+        "categories":[
+            {
+                "icon":"fa-hand-holding-dollar",
+                "name":"Salary",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 8444
+                }
+            },
+            {
+                "icon":"fa-paw",
+                "name":"Rover",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value":50
+                } 
+            },
+            {
+                "icon":"fa-money-bill-1-wave",
+                "name":"Cashback",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 20
+                }
+            }
+        ]
+    },
+    "needsSection":{
+        "name":"Needs",
+        "categories":[
+            {
+                "icon":"fa-house",
+                "name":"Mortgage",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 1828.93
+                }
+            },
+            {
+                "icon":"fa-house-flag",
+                "name":"HOA Fee",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 170
+                } 
+            },
+            {
+                "icon":"fa-cart-shopping",
+                "name":"Groceries",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 1200
+                }
+            }
+        ]
+    },
+    "wantsSection":{
+        "name":"Wants",
+        "categories":[
+            {
+                "icon":"fa-car-side",
+                "name":"Toys",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 20
+                }
+            },
+            {
+                "icon":"fa-utensils",
+                "name":"Restaurant",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 150
+                } 
+            },
+            {
+                "icon":"fa-shirt",
+                "name":"Clothes",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 60
+                }
+            }
+        ]
+    },
+    "savingAndDebtSection":{
+        "name":"Saving & Debt",
+        "categories":[
+            {
+                "icon":"fa-piggy-bank",
+                "name":"Retirement 401(k)",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 400.03
+                }
+            },
+            {
+                "icon":"fa-house-fire",
+                "name":"Emergency Saving",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 200
+                } 
+            },
+            {
+                "icon":"fa-circle-h",
+                "name":"HSA",
+                "amount":{
+                    "currencySymbol": "$",
+                    "value": 280.77
+                } 
+            }
+        ]
     }
 }
